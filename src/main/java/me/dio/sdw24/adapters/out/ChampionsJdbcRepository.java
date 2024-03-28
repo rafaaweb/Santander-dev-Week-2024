@@ -10,12 +10,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class ChampionJdbcRepository implements ChampionsRepository {
+public class ChampionsJdbcRepository implements ChampionsRepository {
 
     private final JdbcTemplate jdbcTemplate;
     private final RowMapper<Champion> championsRowMapper;
 
-    public ChampionJdbcRepository(JdbcTemplate jdbcTemplate){
+    public ChampionsJdbcRepository(JdbcTemplate jdbcTemplate){
 
         this.jdbcTemplate = jdbcTemplate;
         this.championsRowMapper = (rs, rowNum) -> new Champion(
